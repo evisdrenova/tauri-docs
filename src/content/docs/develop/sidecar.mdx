@@ -224,7 +224,7 @@ async fn call_my_sidecar(app: tauri::AppHandle) {
     .sidecar("my-sidecar")
     .unwrap()
     .args(["arg1", "-a", "--arg2", "any-string-that-matches-the-validator"]);
-  let (mut _rx, mut _child) = sidecar_command.spawn().unwrap();
+  let (mut _rx, mut child) = sidecar_command.spawn().unwrap();
 }
 ```
 
